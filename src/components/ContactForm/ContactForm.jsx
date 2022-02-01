@@ -2,7 +2,7 @@ import React from "react";
 import { addContact } from "../../features/contacts";
 import { store } from "../../app/store";
 
-console.clear();
+// console.clear();
 
 const ContactForm = () => {
   const submitForm = (e) => {

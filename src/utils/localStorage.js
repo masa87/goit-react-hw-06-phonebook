@@ -6,6 +6,7 @@ const saveToLocalStore = (key, value) => {
     console.error("Set state error: ", error.message);
   }
 };
+
 const loadLocalStore = (key) => {
   try {
     const serializedState = localStorage.getItem(key);
@@ -15,4 +16,9 @@ const loadLocalStore = (key) => {
   }
 };
 
-export { saveToLocalStore, loadLocalStore };
+if (loadLocalStore("CONTACTS") === undefined) {
+  saveToLocalStore("CONTACTS", []);
+}
+
+const initialContacts = loadLocalStore("CONTACTS");
+export { saveToLocalStore, loadLocalStore, initialContacts };

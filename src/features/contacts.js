@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from "@reduxjs/toolkit";
+import { loadLocalStore, initialContacts } from "../utils/localStorage";
 
 const defaultState = {
-  contacts: [],
+  contacts: initialContacts,
   filter: "",
 };
 
